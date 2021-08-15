@@ -1,4 +1,4 @@
-package queue;
+package circularqueue;
 
 public class App {
     public static void main(String[] args) {
@@ -6,9 +6,11 @@ public class App {
         queue.enqueue(2);
         queue.enqueue(3);
         queue.dequeue();
-        queue.enqueue(4);
-        queue.enqueue(5);
-        queue.enqueue(6);
+        queue.enqueue(2);
+        queue.enqueue(2);
+        queue.enqueue(2);
+        queue.enqueue(2);
+        queue.dequeue();
         System.out.println(queue.toString());
     }
 }

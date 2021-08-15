@@ -1,4 +1,4 @@
-package queue;
+package circularqueue;
 
 // Circular Queue: Make Simple Queue and Change to Circular
 public class Queue {
@@ -21,7 +21,7 @@ public class Queue {
             this.front = 0;
             this.rear = 0;
         } else {
-            this.rear++;
+            this.rear = (this.rear + 1) % this.maxSize;
         }
         this.queueArr[this.rear] = obj;
     }
@@ -35,7 +35,7 @@ public class Queue {
             this.front = -1;
             this.rear = -1;
         } else {
-            this.front++;
+            this.front = (this.front + 1) % this.maxSize;
         }
         return removed;
     }
@@ -45,7 +45,7 @@ public class Queue {
     }
 
     public boolean isFull() {
-        return this.rear == this.maxSize - 1;
+        return this.front == (this.rear + 1) % this.maxSize;
     }
 
     public String toString() {
