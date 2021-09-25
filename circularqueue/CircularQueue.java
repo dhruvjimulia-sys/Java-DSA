@@ -1,13 +1,13 @@
 package circularqueue;
 
-// Circular Queue: Make Simple Queue and Change to Circular
-public class Queue {
+// Circular Queue
+public class CircularQueue {
     public Object[] queueArr;
     private int front;
     private int rear;
     public int maxSize;
 
-    public Queue(int size) {
+    public CircularQueue(int size) {
         this.queueArr = new Object[size];
         this.front = -1;
         this.rear = -1;
