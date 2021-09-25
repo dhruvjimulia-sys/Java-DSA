@@ -16,5 +16,7 @@ public class App {
         bst.DFS("inorder");
 
         bst.BFS();
+        
+        System.out.println(bst.search(3));
     }
 }

@@ -47,4 +47,8 @@ public class BST<T> {
         this.root.BFS(queue);
         System.out.println();
     }
+
+    public TreeNode<T> search(Comparable<T> nodeValue) {
+        return this.root.search(nodeValue);
+    }
 }

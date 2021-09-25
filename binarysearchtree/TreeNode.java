@@ -81,4 +81,28 @@ public class TreeNode<T> {
             }
         }
     }
+
+    @SuppressWarnings("unchecked") // Assumes that all values are of same type (during downcast from Comparable<T> to <T>)
+    public TreeNode<T> search(Comparable<T> searchNode) {
+        int comparison = searchNode.compareTo((T) this.val);
+        if (comparison < 0 && this.left != null) {
+            return this.left.search(searchNode);
+        } else if (comparison > 0 && this.right != null) {
+            return this.right.search(searchNode);
+        } else {
+            // System.out.println(this);
+            return this;
+        }
+    }
+
+    public String toString() {
+        String toStringValue = "Value: " + this.val;
+        if (this.left != null) {
+            toStringValue += " Left: " + this.left.val;
+        }
+        if (this.right != null) {
+            toStringValue += " Right: " + this.right.val;
+        }
+        return toStringValue;
+    }
 }
