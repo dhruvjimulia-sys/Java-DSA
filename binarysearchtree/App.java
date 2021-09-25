@@ -11,8 +11,10 @@ public class App {
         bst.insert(4);
         bst.insert(8);
 
-        System.out.println(bst.root.val);
-        System.out.println(bst.root.right.val);
-        System.out.println(bst.root.left.val);
+        bst.DFS("preorder");
+        bst.DFS("postorder");
+        bst.DFS("inorder");
+
+        bst.BFS();
     }
 }
