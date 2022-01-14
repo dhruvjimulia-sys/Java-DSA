@@ -1,5 +1,3 @@
 # 1st command line argument must be any of the folder names
-cd $1
-javac *.java
-cd ..
-java $1.App
+javac -sourcepath src/$1 -d out src/$1/*.java
+java -cp out $1.App
