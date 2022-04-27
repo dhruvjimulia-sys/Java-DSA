@@ -1,5 +1,7 @@
 package list;
 
+import javax.swing.plaf.synth.SynthDesktopIconUI;
+
 public class LinkedList<T> implements List<T> {
     private Node<T> head;
     private int size;
@@ -131,7 +133,8 @@ public class LinkedList<T> implements List<T> {
         return size == 0;
     }
 
-    public void displayList() {
+    @Override
+    public String toString() {
         Node<T> curr = this.head;
         StringBuilder sb = new StringBuilder();
         while (curr != null) {
@@ -139,7 +142,7 @@ public class LinkedList<T> implements List<T> {
             sb.append(" ");
             curr = curr.getNext();
         }
-        System.out.println(sb);
+        return sb.toString();
     }
 
     public static void main(String[] args) {
@@ -151,12 +154,12 @@ public class LinkedList<T> implements List<T> {
         list.addBefore(1, 200);    // 10, 200, 5, 4, 2
         list.remove(0);                 // 200, 5, 4, 2
         list.update(2, 10);       // 200, 5, 10, 2
-        list.displayList();
+        System.out.println(list);
         System.out.println(list.size());
 
         final Integer[] array = {2, 3, 4, 5};
         final LinkedList<Integer> list2 = new LinkedList<>(array);
-        list2.displayList();
+        System.out.println(list2);
         System.out.println(list2.size());
     }
 }

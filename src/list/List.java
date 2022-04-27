@@ -9,5 +9,4 @@ public interface List<T> {
   T remove(int index);
   void update(int index, T value);
   boolean contains(T value);
-  void displayList();
 }

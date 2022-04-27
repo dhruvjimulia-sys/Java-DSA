@@ -91,13 +91,13 @@ public class ArrayList<T> implements List<T> {
   }
 
   @Override
-  public void displayList() {
+  public String toString() {
     final StringBuilder sb = new StringBuilder();
     for (int i = 0; i < size; i++) {
       sb.append(elements[i]);
       sb.append(" ");
     }
-    System.out.println(sb);
+    return sb.toString();
   }
 
   private void shiftSubArrayLeft(int index) {
@@ -121,12 +121,12 @@ public class ArrayList<T> implements List<T> {
     list.addBefore(1, 200);    // 10, 200, 5, 4, 2
     list.remove(0);                 // 200, 5, 4, 2
     list.update(2, 10);       // 200, 5, 10, 2
-    list.displayList();
+    System.out.println(list);
     System.out.println(list.size());
 
     final Integer[] array = {2, 3, 4, 5};
     final LinkedList<Integer> list2 = new LinkedList<>(array);
-    list2.displayList();
+    System.out.println(list2);
     System.out.println(list2.size());
   }
 }
