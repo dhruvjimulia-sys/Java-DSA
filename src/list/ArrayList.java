@@ -57,6 +57,7 @@ public class ArrayList<T> implements List<T> {
       T[] newElements = (T[]) new Object[totalSize * 2];
       System.arraycopy(elements, 0, newElements, 0, size);
       elements = newElements;
+      totalSize *= 2;
     }
   }
 
