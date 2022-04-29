@@ -1,7 +1,5 @@
 package list;
 
-import javax.swing.plaf.synth.SynthDesktopIconUI;
-
 public class LinkedList<T> implements List<T> {
     private Node<T> head;
     private int size;
@@ -146,7 +144,7 @@ public class LinkedList<T> implements List<T> {
     }
 
     public static void main(String[] args) {
-        final LinkedList<Integer> list = new LinkedList<>();
+        final List<Integer> list = new LinkedList<>();
         list.addBefore(0, 2);
         list.addBefore(0, 4);
         list.addBefore(0, 5);      // 5, 4, 2
