@@ -1,4 +1,4 @@
-package doublylinkedlist;
+package list.doublylinkedlist;
 
 // Adavntages of Doubly Linked List Over Singly Linked List
 // O(n) backward traversal

@@ -1,4 +1,4 @@
-package doublylinkedlist;
+package list.doublylinkedlist;
 
 // Linked List
 // Quick Insertion and Deletion at beginning of list / close to beginnning of list

@@ -1,4 +1,4 @@
-package doublylinkedlist;
+package list.doublylinkedlist;
 
 public class ListNode{
     public Object val;

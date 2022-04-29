@@ -1,4 +1,4 @@
-package circularlinkedlist;
+package list.circularlinkedlist;
 
 public class App {
     public static void main(String[] args) {

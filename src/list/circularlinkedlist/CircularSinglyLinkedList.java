@@ -1,4 +1,4 @@
-package circularlinkedlist;
+package list.circularlinkedlist;
 
 // Linked List
 // Quick Insertion and Deletion at beginning of list / close to beginnning of list

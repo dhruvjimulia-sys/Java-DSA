@@ -1,4 +1,4 @@
-package circularlinkedlist;
+package list.circularlinkedlist;
 
 public class ListNode{
     private Object val;
